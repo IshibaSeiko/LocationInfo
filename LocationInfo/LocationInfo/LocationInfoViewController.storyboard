@@ -14,7 +14,20 @@
                     <view key="view" contentMode="scaleToFill" id="DnE-v7-4ev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-uf-7XN">
+                                <rect key="frame" x="146" y="164" width="122" height="30"/>
+                                <state key="normal" title="Location Update!!"/>
+                                <connections>
+                                    <action selector="TappedLocationUpdate:" destination="2B0-yP-PeI" eventType="touchUpInside" id="brN-RR-gzk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6q4-uf-7XN" firstAttribute="top" secondItem="OQr-I5-0uX" secondAttribute="top" constant="120" id="2Xb-JB-t0n"/>
+                            <constraint firstItem="6q4-uf-7XN" firstAttribute="centerX" secondItem="DnE-v7-4ev" secondAttribute="centerX" id="AhO-8g-Dlu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OQr-I5-0uX"/>
                     </view>
                 </viewController>

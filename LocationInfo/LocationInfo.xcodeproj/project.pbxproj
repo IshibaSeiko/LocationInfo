@@ -15,6 +15,8 @@
 		887328E02397A3E800492452 /* LocationInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887328DF2397A3E800492452 /* LocationInfoUITests.swift */; };
 		887B8DAF2397A483008774BD /* LocationInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887B8DAE2397A483008774BD /* LocationInfoViewController.storyboard */; };
 		887B8DB12397A499008774BD /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887B8DB02397A499008774BD /* LocationInfoViewController.swift */; };
+		887B8DB42397A942008774BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887B8DB32397A942008774BD /* CoreLocation.framework */; };
+		887B8DB72397B9F7008774BD /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887B8DB62397B9F7008774BD /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		887328E12397A3E800492452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		887B8DAE2397A483008774BD /* LocationInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationInfoViewController.storyboard; sourceTree = "<group>"; };
 		887B8DB02397A499008774BD /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
+		887B8DB32397A942008774BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		887B8DB62397B9F7008774BD /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		887B8DB82397C613008774BD /* LocationInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationInfo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887B8DB72397B9F7008774BD /* ExternalAccessory.framework in Frameworks */,
+				887B8DB42397A942008774BD /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				887328D32397A3E800492452 /* LocationInfoTests */,
 				887328DE2397A3E800492452 /* LocationInfoUITests */,
 				887328BB2397A3E600492452 /* Products */,
+				887B8DB22397A941008774BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +107,7 @@
 		887328BC2397A3E600492452 /* LocationInfo */ = {
 			isa = PBXGroup;
 			children = (
+				887B8DB82397C613008774BD /* LocationInfo.entitlements */,
 				887328BD2397A3E600492452 /* AppDelegate.swift */,
 				887328BF2397A3E600492452 /* SceneDelegate.swift */,
 				887B8DB02397A499008774BD /* LocationInfoViewController.swift */,
@@ -126,6 +135,15 @@
 				887328E12397A3E800492452 /* Info.plist */,
 			);
 			path = LocationInfoUITests;
+			sourceTree = "<group>";
+		};
+		887B8DB22397A941008774BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				887B8DB62397B9F7008774BD /* ExternalAccessory.framework */,
+				887B8DB32397A942008774BD /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -412,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -426,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationInfo/LocationInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL5QXDL3YG;
 				INFOPLIST_FILE = LocationInfo/Info.plist;
@@ -444,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationInfo/LocationInfo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL5QXDL3YG;
 				INFOPLIST_FILE = LocationInfo/Info.plist;
@@ -466,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL5QXDL3YG;
 				INFOPLIST_FILE = LocationInfoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL5QXDL3YG;
 				INFOPLIST_FILE = LocationInfoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
