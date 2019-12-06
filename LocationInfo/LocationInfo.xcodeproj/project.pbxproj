@@ -53,7 +53,6 @@
 		887B8DB02397A499008774BD /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
 		887B8DB32397A942008774BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		887B8DB62397B9F7008774BD /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
-		887B8DB82397C613008774BD /* LocationInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationInfo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +106,6 @@
 		887328BC2397A3E600492452 /* LocationInfo */ = {
 			isa = PBXGroup;
 			children = (
-				887B8DB82397C613008774BD /* LocationInfo.entitlements */,
 				887328BD2397A3E600492452 /* AppDelegate.swift */,
 				887328BF2397A3E600492452 /* SceneDelegate.swift */,
 				887B8DB02397A499008774BD /* LocationInfoViewController.swift */,

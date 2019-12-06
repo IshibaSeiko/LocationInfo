@@ -8,10 +8,18 @@
 
 import UIKit
 import CoreLocation
-import SystemConfiguration.CaptiveNetwork
+import MapKit
 
 class LocationInfoViewController: UIViewController {
     var locationManager: CLLocationManager?
+    
+    @IBOutlet weak var wifiLatitude: UILabel!
+    @IBOutlet weak var wifiLongitude: UILabel!
+    
+    @IBOutlet weak var gpsLatitude: UILabel!
+    @IBOutlet weak var gpsLongitude: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
