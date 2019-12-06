@@ -1,0 +1,2 @@
+github "ashleymills/Reachability.swift" == 5.0.0
+github "realm/realm-cocoa" == 4.1.1

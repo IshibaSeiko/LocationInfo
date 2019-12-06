@@ -9,6 +9,12 @@
 import UIKit
 import CoreLocation
 import MapKit
+import SystemConfiguration.CaptiveNetwork
+
+import Realm
+import RealmSwift
+
+import Reachability
 
 class LocationInfoViewController: UIViewController {
     var locationManager: CLLocationManager?
@@ -29,6 +35,7 @@ class LocationInfoViewController: UIViewController {
 // MARK: - Action
 extension LocationInfoViewController {
     @IBAction func TappedLocationUpdate(_ sender: UIButton) {
+        
         locationManager = CLLocationManager()
         
         let status = CLLocationManager.authorizationStatus()
@@ -49,8 +56,34 @@ extension LocationInfoViewController: CLLocationManagerDelegate {
         if let last = lastLocation {
             let eventDate = last.timestamp
             if let location = manager.location {
+                
+                let latitude = String(location.coordinate.latitude)
+                let longitude = String(location.coordinate.longitude)
+                
+                var reachability: Reachability
+                
+                do {
+                    reachability = try Reachability()
+                } catch {
+                   return
+                }
                 print("タイムスタンプ：\(eventDate)")
-                print("緯度：\(location.coordinate.latitude)\n経度：\(location.coordinate.longitude)")
+                print("緯度：\(latitude)\n経度：\(longitude)")
+                
+                switch reachability.connection {
+                case .cellular:
+                    gpsLatitude.text = latitude
+                    gpsLongitude.text = longitude
+                    break
+
+                case .wifi:
+                    wifiLatitude.text = latitude
+                    wifiLongitude.text = longitude
+                    break
+
+                default:
+                    break
+                }
             }
         }
         locationManager = nil
